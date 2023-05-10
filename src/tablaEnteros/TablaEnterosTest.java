@@ -43,8 +43,15 @@ class TablaEnterosTest {
 		assertEquals(5, tabla.mayorTabla());
 	}
 
-
+	@Test
+	void testPosicionTabla1() {
+		assertEquals(0, tabla.posicionTabla(1));
+	}
 	
-	
-
+	@Test
+	void testPosicionTabla2() {
+		assertThrows(Exception.class,()->{
+			tabla.posicionTabla(18);
+		});
+	}
 }
